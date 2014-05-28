@@ -26,6 +26,9 @@ This is the easiest way that I have found to quickly set up a static site with B
 
 ## Changelog
 
+* 2014-05-28 -
+Added a Ruby version to the Gemfile.
+
 * 2014-03-13 -
 Added Heroku build support thanks to [This article on randomerrata.com](http://randomerrata.com/post/56163474367/middleman-on-heroku)
 
