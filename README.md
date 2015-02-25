@@ -13,18 +13,71 @@ A collection of libraries and helpers to quickly set up a Bootstrap and Middlema
 * Heroku push/deploy support
 
 
+## Requirements/Dependencies/Tech Used
+This project requires OSX or Linux, with Ruby and a few gems. It may run on Windows, but this is untested.
+
+### Ruby
+Requires Ruby version 2.0 or greater. For details on installing Ruby (we suggest RVM), see [the RVM page](https://rvm.io/).
+
+
+## Installation/Setup/Configuration
+Once you have the Middleman gem installed and before you start working on the project, run:
+```bash
+$ cd {path_to_project}
+$ bundle
+```
+
+This will install all the needed dependencies and gems listed in the `.Gemfile` to get you up and running with Middleman.
+
+
+## Running
+Since we are using Middleman, you need to run the server to view the page. Do do this run:
+
+```bash
+$ middleman
+```
+
+## Development
 You can customize the Bootstrap configuration by editing: `source/css/bootstrap/_bootstrap.scss` and `source/css/bootstrap/_variables.scss`
 This is the easiest way that I have found to quickly set up a static site with Bootstrap, Sass, Compass, and Middleman.
 
+## Building/Deployment
 
-## Usage
-* Clone the repository
-* Run `bundle install` to install all the required gems.
-* Run `middleman` to start the server and then create your HTML/CSS!
-* [Push to Heroku](https://devcenter.heroku.com/articles/git) if desired, and it should [build on the server](http://randomerrata.com/post/56163474367/middleman-on-heroku) when pushed!
+To build the project, quit the server with `ctrl-c`
+Then run:
+```bash
+$ middleman build
+```
+This will run the Middleman build task and generate all of the necessary files. The output of the build command will reside in a `tmp` directory at the root of the project.
 
+
+## Deploying to Heroku
+
+Add the remote to your working copy:
+```bash
+$ git remote add heroku git@heroku.com:app-name.git
+```
+
+Ensure you have the remote added to your working copy:
+```bash
+$ git remote -v
+heroku	git@heroku.com:app-name.git (fetch)
+heroku	git@heroku.com:app-name.git (push)
+
+```
+
+This should output the remotes of the project. One should be called `heroku` and point to the Heroku staging subdomain.
+
+Use the following command to push to Heroku:
+```bash
+$ git push heroku master
+
+```
 
 ## Changelog
+
+* 2014-07-25 -
+Removed the Ruby version from the Gemfile.
 
 * 2014-05-28 -
 Added a Ruby version to the Gemfile.
