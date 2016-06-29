@@ -120,7 +120,7 @@ GEM
       rack (~> 1.4)
     rack-livereload (0.3.16)
       rack
-    rb-fsevent (0.9.4)
+    rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     sass (3.4.22)
@@ -153,9 +153,9 @@ DEPENDENCIES
   middleman-autoprefixer
   middleman-blog
   middleman-deploy (~> 2.0.0.pre.alpha)
-  middleman-livereload (~> 3.4.3)
+  middleman-livereload (~> 3.4.6)
   middleman-sprockets (~> 4.0.0.rc.1)
   puma
   rack-contrib
-  rb-fsevent (<= 0.9.4)
+  rb-fsevent (<= 0.9.7)
   wdm (~> 0.1.0)

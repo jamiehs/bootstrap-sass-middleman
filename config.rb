@@ -3,9 +3,24 @@ set :css_dir, 'css'
 set :js_dir, 'js'
 set :images_dir, 'img'
 
-set :relative_links, true
+set :relative_links, false
 
 set :build_dir, "tmp"
+
+#autoprefixer
+activate :autoprefixer
+
+
+# Reload the browser automatically whenever files change
+activate :livereload
+
+#Sprockets
+activate :sprockets
+
+# Enable directory indexes
+activate :directory_indexes
+
+
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -33,18 +48,6 @@ set :build_dir, "tmp"
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
-
-# Reload the browser automatically whenever files change
-activate :livereload
-
-#Sprockets
-activate :sprockets
-
-# Enable directory indexes
-activate :directory_indexes
-
-#autoprefixer
-activate :autoprefixer
 
 # Methods defined in the helpers block are available in templates
 # helpers do
