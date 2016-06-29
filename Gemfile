@@ -7,7 +7,7 @@ gem "middleman-blog"
 gem "middleman-sprockets", "~> 4.0.0.rc.1"
 
 # Live-reloading plugin
-gem "middleman-livereload", "~> 3.4.6"
+gem "middleman-livereload", github: 'middleman/middleman-livereload'
 # Middleman Deeploy gem - https://github.com/tvaughan/middleman-deploy
 gem "middleman-deploy", "~> 2.0.0.pre.alpha"
 

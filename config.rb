@@ -10,16 +10,15 @@ set :build_dir, "tmp"
 #autoprefixer
 activate :autoprefixer
 
-
-# Reload the browser automatically whenever files change
-activate :livereload
-
 #Sprockets
 activate :sprockets
 
 # Enable directory indexes
 activate :directory_indexes
 
+configure :development do
+  activate :livereload, livereload_css_target: 'css/styles.css', livereload_css_pattern: Regexp.new('_.*\.scss')
+end
 
 ###
 # Page options, layouts, aliases and proxies
