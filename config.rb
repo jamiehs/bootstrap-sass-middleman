@@ -1,12 +1,11 @@
-###
-# Compass
-###
 
-# Change Compass configuration
-compass_config do |config|
-  config.output_style = :nested
-end
+set :css_dir, 'css'
+set :js_dir, 'js'
+set :images_dir, 'img'
 
+set :relative_links, true
+
+set :build_dir, "tmp"
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -38,6 +37,15 @@ end
 # Reload the browser automatically whenever files change
 activate :livereload
 
+#Sprockets
+activate :sprockets
+
+# Enable directory indexes
+activate :directory_indexes
+
+#autoprefixer
+activate :autoprefixer
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
@@ -45,13 +53,6 @@ activate :livereload
 #   end
 # end
 
-set :css_dir, 'css'
-set :js_dir, 'js'
-set :images_dir, 'img'
-
-set :relative_links, false
-
-set :build_dir, "tmp"
 
 # Build-specific configuration
 configure :build do
@@ -59,7 +60,7 @@ configure :build do
   # activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 
   # Enable cache buster
   # activate :asset_hash
@@ -69,4 +70,8 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+  #
+
+  # Don't build these things
+  #ignore ''
 end
