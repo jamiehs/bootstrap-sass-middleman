@@ -5,7 +5,7 @@ A collection of libraries and helpers to quickly set up a Bootstrap and Middlema
 #### Includes:
 * Bootstrap 3
 * jQuery
-* Sass + Compass
+* Sass
 * Modernizer.js
 * Respond.js
 * Holder.js
@@ -30,16 +30,23 @@ $ bundle
 This will install all the needed dependencies and gems listed in the `.Gemfile` to get you up and running with Middleman.
 
 
-## Running
+## Running Middleman
 Since we are using Middleman, you need to run the server to view the page. Do do this run:
 
 ```bash
 $ middleman
 ```
 
+## Browsersync
+Use Node.js to install Browsersync:
+`npm install -g browser-sync`
+
+Then use with Middleman running in another terminal tab:
+`browser-sync start --proxy 'localhost:4567' --files source`
+
 ## Development
 You can customize the Bootstrap configuration by editing: `source/css/bootstrap/_bootstrap.scss` and `source/css/bootstrap/_variables.scss`
-This is the easiest way that I have found to quickly set up a static site with Bootstrap, Sass, Compass, and Middleman.
+This is the easiest way that I have found to quickly set up a static site with Bootstrap, Sass, and Middleman.
 
 ## Building/Deployment
 

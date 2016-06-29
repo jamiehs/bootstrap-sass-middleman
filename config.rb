@@ -16,9 +16,6 @@ activate :sprockets
 # Enable directory indexes
 activate :directory_indexes
 
-configure :development do
-  activate :livereload, livereload_css_target: 'css/styles.css', livereload_css_pattern: Regexp.new('_.*\.scss')
-end
 
 ###
 # Page options, layouts, aliases and proxies
@@ -75,5 +72,5 @@ configure :build do
   #
 
   # Don't build these things
-  #ignore ''
+  ignore 'bs-config.js'
 end
